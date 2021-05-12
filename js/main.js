@@ -5,6 +5,7 @@ console.log(">> Ready :) <<");
 // Variables globales (campos generales)
 // Variable numero usuaria
 const numberInput = document.querySelector(".js-number-input");
+console.log(numberInput);
 // Variable botón prueba
 const buttonInput = document.querySelector(".js-button-input");
 // Variable valor input Pista
@@ -17,27 +18,28 @@ const accText = document.querySelector(".js-acc");
 function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
-console.log(`El número aleatorio es ${getRandomNumber(100)}`);
+const randoNumber = getRandomNumber(100);
+console.log(`El número aleatorio es ${randoNumber}`);
 
 // Función recoger numero usuaria y pintarlo en consola
 function getUserNumber() {
   const numberUser = parseInt(numberInput.value);
-  console.log(`El número escrito por la usuaria es ${numberUser}`);
+  console.log(numberUser);
   return numberUser;
 }
-console.log(getUserNumber());
+console.log(`El número escrito por la usuaria es ${getUserNumber()}`);
 
 // Función comparar número usuaria con número aleatorio para pintar pista en input
 function compareNumbers() {
-  if (getUserNumber > getRandomNumber) {
+  if (getUserNumber() > randoNumber) {
     clueText.innerHTML = "Pista: Demasiado alto";
-  } else if (getUserNumber < getRandomNumber) {
+  } else if (getUserNumber() < randoNumber) {
     clueText.innerHTML = "Pista: Demasiado bajo";
-  } else if (getUserNumber > 100 || b < 0) {
+  } else if (getUserNumber() > 100 || getUserNumber() < 0) {
     clueText.innerHTML = "Pista: El número debe estar entre 1 y 100";
   } /*else if (getUserNumber === "") {
     clueText.innerHTML = "Pista: El número debe estar entre 1 y 100";
-  }*/ else if (getUserNumber === getRandomNumber) {
+  }*/ else if (getUserNumber() === randoNumber) {
     clueText.innerHTML = "Has ganado campeona!!!";
   }
 }
