@@ -1,5 +1,15 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  max-width: 50%;
+}
+.main__number {
+  width: 80%;
+  margin: 20px 0px;
+}
+.main__button {
+  width: 30%;
+}
+.main__clue {
+  border: 2px solid grey;
+}
+.main__acc {
+  border: 2px solid grey;
 }
