@@ -31,15 +31,13 @@ console.log(`El número escrito por la usuaria es ${getUserNumber()}`);
 
 // Función comparar número usuaria con número aleatorio para pintar pista en input
 function compareNumbers() {
-  if (getUserNumber() > randoNumber) {
+  if (getUserNumber() > 100 || getUserNumber() < 0) {
+    clueText.innerHTML = "Pista: El número debe estar entre 1 y 100";
+  } else if (getUserNumber() > randoNumber) {
     clueText.innerHTML = "Pista: Demasiado alto";
   } else if (getUserNumber() < randoNumber) {
     clueText.innerHTML = "Pista: Demasiado bajo";
-  } else if (getUserNumber() > 100 || getUserNumber() < 0) {
-    clueText.innerHTML = "Pista: El número debe estar entre 1 y 100";
-  } /*else if (getUserNumber === "") {
-    clueText.innerHTML = "Pista: El número debe estar entre 1 y 100";
-  }*/ else if (getUserNumber() === randoNumber) {
+  } else if (getUserNumber() === randoNumber) {
     clueText.innerHTML = "Has ganado campeona!!!";
   }
 }
