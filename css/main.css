@@ -1,15 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
 .main {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  color: grey;
+  margin: 15px;
 }
+
+.form {
+  display: flex;
+  flex-flow: column wrap;
+}
+
 .main__number {
-  width: 80%;
-  margin: 20px 0px;
+  padding: 5px 10px;
+  background-color: lightgray;
+  border-radius: 5px;
+  margin: 10px 0px;
+  width: 50vw;
+  min-width: 230px;
+  cursor: pointer;
 }
+
+.main__number::placeholder {
+  color: white;
+}
+
 .main__button {
-  width: 30%;
+  padding: 5px 10px;
+  background-color: #14d9c4;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
 }
-.main__clue {
-  border: 2px solid grey;
-}
-.main__acc {
-  border: 2px solid grey;
+
+p {
+  border: 2px solid lightgray;
+  font-weight: 600;
+  margin: 10px 0px;
+  font-size: 14px;
+  padding: 5px;
 }

@@ -10,26 +10,35 @@
   <body>
     <main class="main">
       <h1 class="main__title">Adivina el número</h1>
-      <form action="">
-        <label class="main__number-title" for="Name"
-          >Introduce aquí tu número:</label
-        >
-        <input
-          class="main__number js-number-input"
-          type="number"
-          placeholder="Indica un número del 0 al 100"
-          value=""
-        />
-        <input
-          class="main__button js-button-input"
-          type="button"
-          value="Prueba"
-        />
+      <form class="main__ form js-form" action="#">
+        <h4>Introduce aquí tu número:</h2>
+        <label class="main__number-title" for="inputNumber">
+          <input
+            id="inputNumber"
+            class="main__number js-number-input"
+            type="number"
+            placeholder="Indica un número del 0 al 100"
+        /></label>
+
+        <label for="button">
+          <input
+            id="button"
+            class="main__button js-button-input"
+            type="button"
+            value="Prueba"
+          />
+        </label>
       </form>
       <p class="main__clue js-clue">Pista: Escribe el número y dale a Prueba</p>
       <p class="main__acc">Número de intentos: <span class="js-acc">0</span></p>
+      <label for="button-reset">
+        <input
+          id="button-reset"
+          class="main__button js-button-reset"
+          type="button"
+          value="Reset"
+      /></label>
     </main>
-
     <script src="./js/main.js"></script>
   </body>
 </html>
